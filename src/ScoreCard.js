@@ -1,5 +1,4 @@
 import React from "react";
-import ScoreTable from "./ScoreTable.js";
 
 function ScoreCard(props) {
   return (
