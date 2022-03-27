@@ -1,6 +1,7 @@
 import "./App.css";
 
 import Header from "./Header.js";
+import HighScores from "./HighScores.js";
 import ScoreCard from "./ScoreCard.js";
 
 let allCountryScores = [
@@ -71,6 +72,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <HighScores scores={allCountryScores} />
       <ScoreCard scores={allCountryScores} />
     </div>
   );
