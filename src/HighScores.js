@@ -1,7 +1,6 @@
 import React from "react";
 
 function HighScores(props) {
-  let newArray = [];
   let scoreArray = [];
   let nameArray = [];
   const obj = {};
@@ -10,7 +9,6 @@ function HighScores(props) {
       if (props.scores[i].scores[j]) {
         let score = props.scores[i].scores[j].s;
         let nameOfPlayer = props.scores[i].scores[j].n;
-        newArray.push(score);
         scoreArray.push(score);
         nameArray.push(nameOfPlayer);
       }
@@ -21,12 +19,10 @@ function HighScores(props) {
     obj[element] = scoreArray[index];
   });
 
-  let topFive = newArray.sort((a, b) => b - a).splice(0, 5);
+  let topFive = scoreArray.sort((a, b) => b - a).splice(0, 5);
 
   return (
     <div className="cards">
-      {/* {console.log(props.scores[0].scores[0].s)} */}
-      {console.log(obj)}
       HIGH SCORES: Worldwide
       <table className="styled-table">
         <tbody>

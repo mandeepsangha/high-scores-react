@@ -1,8 +1,12 @@
 import "./App.css";
 
+import React, { useState } from "react";
 import Header from "./Header.js";
 import HighScores from "./HighScores.js";
 import ScoreCard from "./ScoreCard.js";
+import ScoreCardAsc from "./ScoreCardAsc";
+import ToggleScore from "./ToggleScore";
+import react from "react";
 
 let allCountryScores = [
   {
@@ -69,11 +73,23 @@ let allCountryScores = [
 ];
 
 function App() {
+  const [toggleScoreOrder, setToggleScoreOrder] = useState(true);
+  function logWhenClicked() {
+    setToggleScoreOrder(!toggleScoreOrder);
+    console.log(toggleScoreOrder);
+  }
+
   return (
     <div className="App">
       <Header />
+      <ToggleScore setToggleScoreOrder={setToggleScoreOrder} />
       <HighScores scores={allCountryScores} />
-      <ScoreCard scores={allCountryScores} />
+
+      {toggleScoreOrder ? (
+        <ScoreCard scores={allCountryScores} />
+      ) : (
+        <ScoreCardAsc scores={allCountryScores} />
+      )}
     </div>
   );
 }
