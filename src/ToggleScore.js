@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import ScoreCard from "./ScoreCard";
-import ScoreCardAsc from "./ScoreCardAsc";
+import React from "react";
 
 function ToggleScore(props) {
   // const [toggleScoreOrder, setToggleScoreOrder] = useState(true);

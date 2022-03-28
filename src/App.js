@@ -74,10 +74,6 @@ let allCountryScores = [
 
 function App() {
   const [toggleScoreOrder, setToggleScoreOrder] = useState(true);
-  function logWhenClicked() {
-    setToggleScoreOrder(!toggleScoreOrder);
-    console.log(toggleScoreOrder);
-  }
 
   return (
     <div className="App">
