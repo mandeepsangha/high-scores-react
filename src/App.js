@@ -6,7 +6,6 @@ import HighScores from "./HighScores.js";
 import ScoreCard from "./ScoreCard.js";
 import ScoreCardAsc from "./ScoreCardAsc";
 import ToggleScore from "./ToggleScore";
-import react from "react";
 
 let allCountryScores = [
   {
