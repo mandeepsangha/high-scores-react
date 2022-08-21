@@ -6,6 +6,7 @@ import HighScores from "./HighScores.js";
 import ScoreCard from "./ScoreCard.js";
 import ScoreCardAsc from "./ScoreCardAsc";
 import ToggleScore from "./ToggleScore";
+import Form from "./Form";
 
 let allCountryScores = [
   {
@@ -77,6 +78,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Form />
       <ToggleScore setToggleScoreOrder={setToggleScoreOrder} />
       <HighScores scores={allCountryScores} />
 
